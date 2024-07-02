@@ -7,46 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Media</title>
     <!-- <link rel="icon" type="image/x-icon" href="{% static '/images/favicon_star.png' %}"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}"> -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/styles.css' %}">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script type="text/javascript">window.CSRF_TOKEN = "{{ csrf_token }}";</script>
     <script src="{% static '/js/form_handling.js' %}" defer></script>
 </head>
 
-<body>
-
+<body class="media-list-body">
     <div class="main-page-layout">
-        <div><img src="https://placehold.co/50x50" alt="butterfly icon" class="butterfly-icon"></div>
+        <div><img src="{% static '/images/icons/butterfly-icon-np.png' %}" alt="butterfly icon" class="butterfly-icon"></div>
         <div>
             <div class="gallery">
-                <div class="item">
-                    <img src="https://placehold.co/150x200" alt="Book Cover 1">
+                <div class="media-holder">
+                    <img src="https://placehold.co/200x300" alt="Book Cover 1">
                 </div>
-                <div class="item">
-                    <img src="https://placehold.co/150x200" alt="Book Cover 2">
+                <div class="media-holder">
+                    <img src="https://placehold.co/200x300" alt="Book Cover 1">
+
                 </div>
-                <div class="item">
-                    <img src="https://placehold.co/150x200" alt="Book Cover 2">
+                <div class="media-holder">
+                    <img src="https://placehold.co/200x300" alt="Book Cover 1">
+
                 </div>
-                <div class="item">
-                    <img src="https://placehold.co/150x200" alt="Book Cover 2">
+                <div class="media-holder">
+                    <img src="https://placehold.co/200x300" alt="Book Cover 1">
+
                 </div>
-                <div class="item">
-                    <img src="https://placehold.co/150x200" alt="Book Cover 2">
+                <div class="media-holder">
+                    <img src="https://placehold.co/200x300" alt="Book Cover 1">
+
                 </div>
-                <div class="item">
-                    <img src="https://placehold.co/150x200" alt="Book Cover 2">
+                <div class="media-holder">
+                    <img src="https://placehold.co/200x300" alt="Book Cover 1">
+                </div>
+                <div class="media-holder">
+                    <img src="https://placehold.co/200x300" alt="Book Cover 1">
                 </div>
             </div>
             <div class="bottom-fade"></div>
         </div>
         <div class="sidebar">
+            <div class="sidebar-inner">
             <hr class="sidebar-hr">
             <div class="sidebar-text-container">
-                <p class="sidebar-text sidebar-text-1">browse by book</p>
-                <p class="sidebar-text sidebar-text-2">see all highlights</p>
+                <div class="sidebar-text sidebar-text-1">browse by book</div>
+                <div class="sidebar-text sidebar-text-2">see all highlights</div>
             </div>
+        </div>
         </div>
 
     </div>
