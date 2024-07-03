@@ -3,4 +3,13 @@
 .sidebar-text {
     @include light-grey-sans-serif;
     font-size: 1.25em;
+    a {
+        text-decoration: none;
+        color: $med-grey;
+    }
+    a:hover {
+        color: white;
+    }
 }
+
+

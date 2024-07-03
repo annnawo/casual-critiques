@@ -68,6 +68,7 @@
     height: 21em;
     margin-bottom: 45px;
     margin-right: 10px;
+    border-color: $med-grey;
 }
 
 .media-holder {
@@ -112,4 +113,10 @@
 
 .book-cover:hover .minimalist {
     opacity: 0;
+}
+
+
+.testtext {
+    color: white;
+    z-index: 100000;
 }

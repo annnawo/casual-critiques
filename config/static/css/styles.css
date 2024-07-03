@@ -53,9 +53,16 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar-text {
-  color: #d3d3d3;
+  color: #9c9c9c;
   font-family: "Familjen Grotesk", sans-serif;
   font-size: 1.25em;
+}
+.sidebar-text a {
+  text-decoration: none;
+  color: #9c9c9c;
+}
+.sidebar-text a:hover {
+  color: white;
 }
 
 .main-page-layout, .media-list-body {
@@ -125,6 +132,7 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 21em;
   margin-bottom: 45px;
   margin-right: 10px;
+  border-color: #9c9c9c;
 }
 
 .media-holder {
@@ -169,6 +177,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .book-cover:hover .minimalist {
   opacity: 0;
+}
+
+.testtext {
+  color: white;
+  z-index: 100000;
 }
 
 /*# sourceMappingURL=styles.css.map */
