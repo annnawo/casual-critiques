@@ -20,21 +20,24 @@
             <div class="gallery">
 
                 {% for book in books %}
-                <a href="{% url 'book_detail' book.slug %}" class="testtext">{{ book.title }}</a>
+
+                <div class="media-holder"><a href="{% url 'book_detail' book.slug %}">
+                    <div class="book-cover">
+                        <img src="{% static book.svg_path %}" class="cover minimalist" alt="Minimalist Cover">
+                        <img src="{% static book.jpg_path %}" class="cover actual" alt="Actual Cover">
+
+                    </div></a>
+                </div>
+
                 {% endfor %}
 
-                <div class="media-holder">
+                <!-- <div class="media-holder">
                     <div class="book-cover">
                         <img src="{% static '/images/eat-a-peach.svg' %}" class="cover minimalist" alt="Minimalist Cover">
                         <img src="{% static '/images/eat-a-peach.jpg' %}" class="cover actual" alt="Actual Cover">
                     </div>
                 </div>
-                <div class="media-holder"><a href="">
-                    <div class="book-cover">
-                        <img src="{% static '/images/the-time-machine.svg' %}" class="cover minimalist" alt="Minimalist Cover">
-                        <img src="{% static '/images/the-time-machine.jpg' %}" class="cover actual" alt="Actual Cover">
-                    </div></a>
-                </div>
+                
                 <div class="media-holder">
                     <div class="book-cover">
                         <img src="{% static '/images/capitalist-realism.svg' %}" class="cover minimalist" alt="Minimalist Cover">
@@ -56,7 +59,7 @@
                     <img src="https://placehold.co/200x300" alt="Book Cover 1">
                 </div>
 
-                
+                 -->
 
             </div>
             <div class="bottom-fade"></div>

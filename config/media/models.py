@@ -17,8 +17,9 @@ class Book(models.Model):
     date_finished = models.DateField()
     times_read = models.IntegerField()
     year_published = models.PositiveIntegerField(null=True)
+    svg_path = models.CharField(max_length=200, null=False)
+    jpg_path = models.CharField(max_length=200, null=False)
     slug = models.SlugField(default="", null=False)
-    
     
     def __str__(self):
         return self.title
