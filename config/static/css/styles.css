@@ -1,7 +1,7 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -100,6 +100,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .sidebar, .sidebar-inner, .sidebar-hr {
   padding: 0;
   margin: 0;
+  z-index: 1000;
 }
 
 .sidebar-inner {
@@ -182,6 +183,146 @@ p, h1, h2, h3, h4, h5, h6 {
 .testtext {
   color: white;
   z-index: 100000;
+}
+
+.book-detail-body {
+  background-color: black;
+  color: white;
+}
+
+.middle-content-mbd {
+  display: grid;
+  grid-template-columns: 23% 8% 72%;
+  margin: 4em 4em 1em 4em;
+}
+
+.cover-title-info-main {
+  position: relative;
+}
+
+.cover-title-info-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  position: sticky;
+  top: 0;
+}
+.cover-title-info-inner h1,
+.cover-title-info-inner h2,
+.cover-title-info-inner img {
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.book-detail-desc {
+  font-style: italic;
+  padding-top: 2em;
+  font-weight: bold;
+  font-size: 1.15em;
+  color: #9c9c9c;
+  font-family: "Libre Baskerville", serif;
+}
+
+.book-title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5em;
+}
+
+.spoiler-group, .highlight-message, .author-name, .year-published, .page-number-text {
+  font-family: "Familjen Grotesk", sans-serif;
+}
+
+.spoiler-warning-text {
+  font-size: 1.5em;
+  color: #9c9c9c;
+}
+
+.spoiler-free, .site-footnotes, .highlight-content-text {
+  font-family: "Inter", sans-serif;
+}
+
+.spoiler-free {
+  margin-top: 2em;
+}
+
+.highlight-message {
+  font-size: 1.15em;
+}
+
+.highlight-content-text {
+  font-size: 1em;
+}
+
+.spacer-li {
+  padding-bottom: 40rem;
+}
+
+.site-footnotes-pos {
+  background-color: black;
+  z-index: 100;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.75em;
+  margin: 2.5em 0;
+}
+
+.author-name, .year-published {
+  color: #d3d3d3;
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 1.25em;
+}
+
+.bottom-fade-bd {
+  margin-left: 5em;
+  height: 100px;
+  min-width: 75%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 99;
+}
+
+.highlights-content-main {
+  margin: 0 2.25em 0 0.5em;
+}
+
+.sp-attention-icon {
+  margin: 0 1em 0 0;
+  height: 25px;
+  width: auto;
+}
+
+.spoiler-group {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.page-number-text {
+  color: #9c9c9c;
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.site-footnotes, .site-footnotes a {
+  color: #d3d3d3;
+}
+
+.dg {
+  color: #9c9c9c;
+}
+
+.site-footnotes a {
+  font-size: 1em;
+}
+
+.footnote-sep {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

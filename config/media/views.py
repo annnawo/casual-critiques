@@ -16,4 +16,5 @@ def all_media(request):
 
 def book_detail(request, book_slug):
     book = get_object_or_404(Book, slug=book_slug)
-    return render(request, 'media/book_detail.html', {'book': book})
+    highlights = book.highlights.all().order_by('page_number').values()
+    return render(request, 'media/book_detail.html', {'book': book, 'highlights':highlights})

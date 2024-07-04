@@ -1,1 +1,95 @@
-<h1>test</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/styles.css' %}">
+</head>
+
+<body class="book-detail-body">
+
+    <div class="main-page-layout">
+        <div><img src="{% static '/images/icons/butterfly-icon-np.png' %}" alt="butterfly icon" class="butterfly-icon">
+        </div>
+        <div class="all-middle-content">
+            <div class="middle-content-mbd">
+                <div class="cover-title-info-main">
+                    <div class='cover-title-info-inner'>
+                        <p class="book-detail-desc">highlights from</p>
+                        <h1 class="book-title">{{ book.title }}</h1>
+                        <div class="item">
+                            <img src="{% static book.jpg_path %}" alt="Book Cover 2">
+                        </div>
+                        {% for author in book.authors.all %}
+                        <h3 class="author-name">{{ author.name }} </h3>
+                        {% if not forloop.last %}<br>{% endif %}
+                        {% endfor %}
+                        <h3 class="year-published">{{ book.year_published }}</h3>
+                    </div>
+                </div>
+
+<div></div>
+
+                <div class="highlights-content-main">
+                    <div>
+                        {% if book.contains_spoilers %}
+                        <div class="spoiler-group">
+                        <img src="{% static '/images/icons/attention-icon.png' %}" alt="attention '!' icon" class="sp-attention-icon">
+                        <div><p class="spoiler-warning-text">Contains Spoilers</p></div>
+                        </div>
+                        {% else %}
+                        <div class="spoiler-free"></div>
+                        {% endif %}
+                        {% if book.highlights_uploaded %}
+
+                        {% for highlight in highlights %}
+                        <div><p class="highlight-content-text">{{highlight.content}}</p></div>
+                        {% if highlight.page_number %} 
+                        <div><p class="page-number-text"> Page {{ highlight.page_number }}</p></div>
+                        {% endif %}
+                        <br>
+                        {% endfor %}
+
+                        <div>
+                            
+                        </div>
+                        {% else %}
+                        <div class="highlight-message">
+                            <p>Highlights haven't been uploaded for this book yet!</p>
+                        </div>
+                        {% endif %}
+                             
+                        {% if book.notes_uploaded %}
+                        <hr>
+                        <div></div>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="bottom-fade"></div>
+
+
+        </div>
+
+        {% include 'media/sidebar.html' %}
+
+        <div class="site-footnotes-pos">
+        <div class="site-footnotes">
+            <p>Check out this project on <a href="https://github.com/annnawo/casual-critiques">GitHub</a></p><p class="footnote-sep">
+            This concept was heavily inspired by the talented Melanie Richards' <a href="https://highlights.melanie-richards.com/">Highlights</a> site.</p>
+            <p class="dg">Covers and highlights are copyright to their respective authors.</p>
+            <p class="dg">"Butterfly" icon by Alex Muravev from <a href=" https://thenounproject.com/browse/icons/term/butterfly">Noun Project</a> CC BY 3.0</p>
+            <p class="dg">"exclamation" icon by shashank singh from <a href=" https://thenounproject.com/browse/icons/term/exclamation">Noun Project</a> CC BY 3.0</p>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>

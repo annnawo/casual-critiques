@@ -19,10 +19,15 @@ class Book(models.Model):
     year_published = models.PositiveIntegerField(null=True)
     svg_path = models.CharField(max_length=200, null=False)
     jpg_path = models.CharField(max_length=200, null=False)
+    contains_spoilers = models.BooleanField(null=True)
+    highlights_uploaded = models.BooleanField(null=True)
+    notes_uploaded = models.BooleanField(null=True)
     slug = models.SlugField(default="", null=False)
     
     def __str__(self):
         return self.title
     
-
-    
+class Highlight(models.Model):
+    book = models.ForeignKey(Book, related_name='highlights', on_delete=models.CASCADE)
+    content = models.TextField()
+    page_number = models.PositiveIntegerField(null=True, blank=True)
