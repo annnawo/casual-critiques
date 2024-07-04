@@ -4,3 +4,17 @@
     color: $med-grey;
     font-family: $familjen-grotesk;
 }
+
+@mixin book-title-serif {
+    font-family: $libre-baskerville;
+    font-size: 1.5em;
+    color: white;
+}
+
+@mixin detail-med-grey-italic {
+    color: $med-grey;
+    font-family: $libre-baskerville;
+    font-weight: bold;
+    font-style: italic;
+}
+

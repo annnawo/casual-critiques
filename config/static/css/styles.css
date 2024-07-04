@@ -65,6 +65,63 @@ p, h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.spoiler-group, .highlight-message, .author-name, .year-published, .page-number-text {
+  font-family: "Familjen Grotesk", sans-serif;
+}
+
+.spoiler-free, .site-footnotes, .highlight-content-text {
+  font-family: "Inter", sans-serif;
+}
+
+.book-title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5em;
+  color: white;
+}
+
+.book-detail-desc {
+  color: #9c9c9c;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.site-footnotes-pos, h1, h2, img {
+  text-align: center;
+}
+
+.highlight-content-text, .page-number-text, .site-footnotes a {
+  font-size: 1em;
+}
+
+.book-detail-desc, .highlight-message {
+  font-size: 1.15em;
+}
+
+.spoiler-warning-text {
+  font-size: 1.5em;
+}
+
+.site-footnotes-pos {
+  font-size: 0.75em;
+}
+
+.author-name, .year-published {
+  font-size: 1.25em;
+}
+
+.author-name, .year-published, .site-footnotes, .site-footnotes a {
+  color: #d3d3d3;
+}
+
+.spoiler-warning-text, .page-number-text, .dg {
+  color: #9c9c9c;
+}
+
+.book-detail-body {
+  color: white;
+}
+
 .main-page-layout, .media-list-body {
   background-color: black;
 }
@@ -185,9 +242,12 @@ p, h1, h2, h3, h4, h5, h6 {
   z-index: 100000;
 }
 
+.cover-title-info-inner, .site-footnotes-pos, .spoiler-group {
+  display: flex;
+}
+
 .book-detail-body {
   background-color: black;
-  color: white;
 }
 
 .middle-content-mbd {
@@ -201,7 +261,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .cover-title-info-inner {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
@@ -213,46 +272,14 @@ p, h1, h2, h3, h4, h5, h6 {
 .cover-title-info-inner img {
   margin: 10px 0;
   padding: 0;
-  text-align: center;
 }
 
 .book-detail-desc {
-  font-style: italic;
   padding-top: 2em;
-  font-weight: bold;
-  font-size: 1.15em;
-  color: #9c9c9c;
-  font-family: "Libre Baskerville", serif;
-}
-
-.book-title {
-  font-family: "Libre Baskerville", serif;
-  font-size: 1.5em;
-}
-
-.spoiler-group, .highlight-message, .author-name, .year-published, .page-number-text {
-  font-family: "Familjen Grotesk", sans-serif;
-}
-
-.spoiler-warning-text {
-  font-size: 1.5em;
-  color: #9c9c9c;
-}
-
-.spoiler-free, .site-footnotes, .highlight-content-text {
-  font-family: "Inter", sans-serif;
 }
 
 .spoiler-free {
   margin-top: 2em;
-}
-
-.highlight-message {
-  font-size: 1.15em;
-}
-
-.highlight-content-text {
-  font-size: 1em;
 }
 
 .spacer-li {
@@ -263,19 +290,14 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: black;
   z-index: 100;
   width: 100vw;
-  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-size: 0.75em;
   margin: 2.5em 0;
 }
 
 .author-name, .year-published {
-  color: #d3d3d3;
   margin: 10px 0 0;
   padding: 0;
-  font-size: 1.25em;
 }
 
 .bottom-fade-bd {
@@ -298,27 +320,12 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .spoiler-group {
-  display: flex;
   align-items: center;
   margin: 2em 0;
 }
 
 .page-number-text {
-  color: #9c9c9c;
-  font-size: 1em;
   margin: 5px 0;
-}
-
-.site-footnotes, .site-footnotes a {
-  color: #d3d3d3;
-}
-
-.dg {
-  color: #9c9c9c;
-}
-
-.site-footnotes a {
-  font-size: 1em;
 }
 
 .footnote-sep {

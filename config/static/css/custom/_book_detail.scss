@@ -1,79 +1,42 @@
+.cover-title-info-inner, .site-footnotes-pos, .spoiler-group {
+    display: flex;
+}
+
 .book-detail-body {
     background-color: black;
-    color: white;
 }
 
 
 .middle-content-mbd {
-    // display: flex;
     display: grid;
     grid-template-columns: 23% 8% 72%;
-    // border: solid 1px purple;
     margin: 4em 4em 1em 4em;
-
 }
 
 .cover-title-info-main {
     position: relative;
-    // border: solid 1px salmon;
-    // margin: 0 4em 0 1.5em;
 }
 
 .cover-title-info-inner {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     position: sticky;
     top: 0;
-    // border: solid yellowgreen 1px;
-
     h1,
     h2,
     img {
         margin: 10px 0;
         padding: 0;
-        text-align: center;
     }
 }
 
 .book-detail-desc {
-    font-style: italic;
     padding-top: 2em;
-    font-weight: bold;
-    font-size: 1.15em;
-    color: $med-grey;
-    font-family: $libre-baskerville;
-}
-
-.book-title {
-    font-family: $libre-baskerville;
-    font-size: 1.5em;
-}
-
-.spoiler-group, .highlight-message, .author-name, .year-published, .page-number-text  {
-    font-family: $familjen-grotesk;
-}
-
-.spoiler-warning-text {
-    font-size: 1.5em;
-    color: $med-grey;
-}
-
-.spoiler-free, .site-footnotes, .highlight-content-text {
-    font-family: $inter-sans-serif;
 }
 
 .spoiler-free {
     margin-top: 2em;
-}
-
-.highlight-message {
-    font-size: 1.15em;
-}
-
-.highlight-content-text {
-    font-size: 1em;
 }
 
 .spacer-li {
@@ -81,24 +44,17 @@
 }
 
 .site-footnotes-pos {
-    // margin-left: 10rem;
     background-color: black;
     z-index: 100;
-    // border: solid pink 1px;
     width: 100vw;
-    display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    font-size: .75em;
     margin: 2.5em 0;
 }
 
 .author-name, .year-published {
-    color: $light-grey;
     margin: 10px 0 0;
     padding: 0;
-    font-size: 1.25em;
 }
 
 .bottom-fade-bd {
@@ -121,28 +77,12 @@
 }
 
 .spoiler-group {
-    display: flex;
     align-items: center;
     margin: 2em 0;
-
 }
 
 .page-number-text {
- color: $med-grey;
- font-size: 1em;
-margin: 5px 0;
-}
-
-.site-footnotes, .site-footnotes a {
-    color: $light-grey;
-}
-
-.dg {
-    color: $med-grey;
-}
-
-.site-footnotes a {
-    font-size: 1em;
+    margin: 5px 0;
 }
 
 .footnote-sep {
