@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ book.title }}</title>
+    <title>All Highlights</title>
     <link rel="stylesheet" type="text/css" href="{% static '/css/styles.css' %}">
 </head>
 
@@ -15,6 +15,8 @@
         <div><img src="{% static '/images/icons/butterfly-icon-np.png' %}" alt="butterfly icon" class="butterfly-icon">
         </div>
         <div class="all-middle-content">
+            {% for book in books %}
+            {% if book.highlights_uploaded %}
             <div class="middle-content-mbd">
                 <div class="cover-title-info-main">
                     <div class='cover-title-info-inner'>
@@ -35,6 +37,7 @@
 
                 <div class="highlights-content-main">
                     <div>
+                        
                         {% if book.contains_spoilers %}
                         <div class="spoiler-group">
                         <img src="{% static '/images/icons/attention-icon.png' %}" alt="attention '!' icon" class="sp-attention-icon">
@@ -43,9 +46,8 @@
                         {% else %}
                         <div class="spoiler-free"></div>
                         {% endif %}
-                        {% if book.highlights_uploaded %}
-
-                        {% for highlight in highlights %}
+              
+                        {% for highlight in book.highlights.all|dictsort:"page_number" %}
                         <div><p class="highlight-content-text">{{highlight.content}}</p></div>
                         {% if highlight.location %}
                         <div><p class="page-number-text"> Loc. {{ highlight.location }}</p></div>
@@ -54,25 +56,16 @@
                         {% endif %}
                         <br>
                         {% endfor %}
-
-                        <div>
-                            
-                        </div>
-                        {% else %}
-                        <div class="highlight-message">
-                            <p>Highlights haven't been uploaded for this book yet!</p>
-                        </div>
-                        {% endif %}
-                             
-                        {% if book.notes_uploaded %}
-                        <hr>
-                        <div></div>
-                        {% endif %}
+                       
+                  
 
                     </div>
 
                 </div>
             </div>
+            {% endif %}
+            {% endfor %}
+
             <div class="bottom-fade"></div>
 
 

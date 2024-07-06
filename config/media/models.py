@@ -31,3 +31,5 @@ class Highlight(models.Model):
     book = models.ForeignKey(Book, related_name='highlights', on_delete=models.CASCADE)
     content = models.TextField()
     page_number = models.PositiveIntegerField(null=True, blank=True)
+    location = models.PositiveIntegerField(null=True, blank=True)
+    
