@@ -6,27 +6,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Media</title>
-    <!-- <link rel="icon" type="image/x-icon" href="{% static '/images/favicon_star.png' %}"> -->
+    <link rel="icon" type="image/x-icon" href="{% static '/images/icons/highlights-favicon.png' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/css/styles.css' %}">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script type="text/javascript">window.CSRF_TOKEN = "{{ csrf_token }}";</script>
 </head>
 
 <body class="media-list-body">
     <div class="main-page-layout">
-        <div><img src="{% static '/images/icons/butterfly-icon-np.png' %}" alt="butterfly icon" class="butterfly-icon"></div>
+        <div><img src="{% static '/images/icons/butterfly-icon-np.png' %}" alt="butterfly icon" class="butterfly-icon">
+        </div>
+
+        <div class="sidebar-detail-vis-mobile">
+            {% include 'media/sidebar.html' %}
+        </div>
+
         <div>
             <div class="gallery">
 
                 {% for book in books %}
 
                 <div class="media-holder"><a href="{% url 'book_detail' book.slug %}">
-                    <div class="book-cover">
-                        <img src="{% static book.svg_path %}" class="cover minimalist" alt="Minimalist Cover">
-                        <img src="{% static book.jpg_path %}" class="cover actual" alt="Actual Cover">
+                        <div class="book-cover">
+                            <img src="{% static book.svg_path %}" class="cover minimalist" alt="Minimalist Cover">
+                            <img src="{% static book.jpg_path %}" class="cover actual" alt="Actual Cover">
 
-                    </div></a>
+                        </div>
+                    </a>
                 </div>
 
                 {% endfor %}
@@ -65,7 +70,23 @@
             <div class="bottom-fade"></div>
         </div>
 
-        {% include 'media/sidebar.html' %}
+        <div class="sidebar-detail-vis">
+            {% include 'media/sidebar.html' %}
+        </div>
+
+        <div class="site-footnotes-pos">
+            <div class="site-footnotes">
+                <p>Check out this project on <a href="https://github.com/annnawo/casual-critiques">GitHub</a></p>
+                <p class="footnote-sep">
+                    This concept was heavily inspired by the talented Melanie Richards' <a
+                        href="https://highlights.melanie-richards.com/">Highlights</a> site.</p>
+                <p class="dg">Covers and highlights are copyright to their respective authors.</p>
+                <p class="dg">"Butterfly" icon by Alex Muravev from <a
+                        href=" https://thenounproject.com/browse/icons/term/butterfly">Noun Project</a> CC BY 3.0</p>
+                <p class="dg">"exclamation" icon by shashank singh from <a
+                        href=" https://thenounproject.com/browse/icons/term/exclamation">Noun Project</a> CC BY 3.0</p>
+            </div>
+        </div>
 
     </div>
 </body>
